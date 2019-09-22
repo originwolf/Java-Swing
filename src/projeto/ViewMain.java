@@ -31,9 +31,10 @@ public class ViewMain extends javax.swing.JFrame {
 
         botaoCalculaSoma2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        botaoCalculaSoma = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        botaoCalculaSoma1 = new javax.swing.JButton();
+        btnSoma = new javax.swing.JButton();
+        btnSubtracao = new javax.swing.JButton();
+        btnDivisao = new javax.swing.JButton();
+        btnMultiplicacao = new javax.swing.JButton();
 
         botaoCalculaSoma2.setText("Calculadora de Multiplicação");
         botaoCalculaSoma2.addActionListener(new java.awt.event.ActionListener() {
@@ -44,24 +45,31 @@ public class ViewMain extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        botaoCalculaSoma.setText("Calculadora de Somas");
-        botaoCalculaSoma.addActionListener(new java.awt.event.ActionListener() {
+        btnSoma.setText("Calculadora de Somas");
+        btnSoma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoCalculaSomaActionPerformed(evt);
+                btnSomaActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Calculadora de Subtrações");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnSubtracao.setText("Calculadora de Subtrações");
+        btnSubtracao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnSubtracaoActionPerformed(evt);
             }
         });
 
-        botaoCalculaSoma1.setText("Calculadora de Multiplicação");
-        botaoCalculaSoma1.addActionListener(new java.awt.event.ActionListener() {
+        btnDivisao.setText("Calculadora de Divisão");
+        btnDivisao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoCalculaSoma1ActionPerformed(evt);
+                btnDivisaoActionPerformed(evt);
+            }
+        });
+
+        btnMultiplicacao.setText("Calculadora de Multiplicação");
+        btnMultiplicacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMultiplicacaoActionPerformed(evt);
             }
         });
 
@@ -69,13 +77,17 @@ public class ViewMain extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(botaoCalculaSoma1, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
-                    .addComponent(botaoCalculaSoma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnSoma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnMultiplicacao, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnSubtracao, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 1, Short.MAX_VALUE))
+                    .addComponent(btnDivisao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -83,11 +95,13 @@ public class ViewMain extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
-                    .addComponent(botaoCalculaSoma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(botaoCalculaSoma1, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
-                .addContainerGap())
+                    .addComponent(btnSubtracao, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
+                    .addComponent(btnSoma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnMultiplicacao, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                    .addComponent(btnDivisao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(19, 19, 19))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -104,33 +118,41 @@ public class ViewMain extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botaoCalculaSomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCalculaSomaActionPerformed
+    private void btnSomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSomaActionPerformed
         ViewSoma form = new ViewSoma(this,true);
         form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
         form.setLocationRelativeTo(null);
         form.setResizable(false);
         form.setVisible(true);
-    }//GEN-LAST:event_botaoCalculaSomaActionPerformed
+    }//GEN-LAST:event_btnSomaActionPerformed
 
-    private void botaoCalculaSoma1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCalculaSoma1ActionPerformed
-        ViewMultiplicacao form = new ViewMultiplicacao(this,true);
+    private void btnDivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivisaoActionPerformed
+        ViewDivisao form = new ViewDivisao(this,true);
         form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
         form.setLocationRelativeTo(null);
         form.setResizable(false);
         form.setVisible(true);
-    }//GEN-LAST:event_botaoCalculaSoma1ActionPerformed
+    }//GEN-LAST:event_btnDivisaoActionPerformed
 
     private void botaoCalculaSoma2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCalculaSoma2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botaoCalculaSoma2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnSubtracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubtracaoActionPerformed
         ViewSubtracao form = new ViewSubtracao(this,true);
         form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
         form.setLocationRelativeTo(null);
         form.setResizable(false);
         form.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnSubtracaoActionPerformed
+
+    private void btnMultiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicacaoActionPerformed
+        ViewMultiplicacao form = new ViewMultiplicacao(this,true);
+        form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        form.setLocationRelativeTo(null);
+        form.setResizable(false);
+        form.setVisible(true);
+    }//GEN-LAST:event_btnMultiplicacaoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,10 +190,11 @@ public class ViewMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botaoCalculaSoma;
-    private javax.swing.JButton botaoCalculaSoma1;
     private javax.swing.JButton botaoCalculaSoma2;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnDivisao;
+    private javax.swing.JButton btnMultiplicacao;
+    private javax.swing.JButton btnSoma;
+    private javax.swing.JButton btnSubtracao;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
