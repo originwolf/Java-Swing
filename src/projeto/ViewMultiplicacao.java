@@ -9,12 +9,12 @@ package projeto;
  *
  * @author pedri
  */
-public class ViewCalculadoraSubtracao extends javax.swing.JFrame {
+public class ViewMultiplicacao extends javax.swing.JFrame {
 
     /**
-     * Creates new form ViewCalculadoraSubtracao
+     * Creates new form ViewMultiplicacao
      */
-    public ViewCalculadoraSubtracao(java.awt.Frame parent, boolean modal) {
+    public ViewMultiplicacao(java.awt.Frame parent, boolean modal) {
         initComponents();
     }
 
@@ -28,21 +28,21 @@ public class ViewCalculadoraSubtracao extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btnMultiplicacao = new javax.swing.JButton();
         txtResultado = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txtNumero2 = new javax.swing.JTextField();
-        txtNumero1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        txtNumero1 = new javax.swing.JTextField();
+        txtNumero2 = new javax.swing.JTextField();
         btnFechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Subtração");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnMultiplicacao.setText("Multiplicação");
+        btnMultiplicacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnMultiplicacaoActionPerformed(evt);
             }
         });
 
@@ -67,7 +67,7 @@ public class ViewCalculadoraSubtracao extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMultiplicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(59, Short.MAX_VALUE)
@@ -102,8 +102,8 @@ public class ViewCalculadoraSubtracao extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnMultiplicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28))
         );
 
@@ -121,7 +121,7 @@ public class ViewCalculadoraSubtracao extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnMultiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicacaoActionPerformed
         String numero1, numero2, resultado;
         int num1, num2;
 
@@ -131,10 +131,10 @@ public class ViewCalculadoraSubtracao extends javax.swing.JFrame {
         num1 = Integer.parseInt(numero1);
         num2 = Integer.parseInt(numero2);
 
-        resultado = Integer.toString(num1 - num2);
+        resultado = Integer.toString(num1 * num2);
 
         txtResultado.setText(resultado);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnMultiplicacaoActionPerformed
 
     private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
         dispose();
@@ -143,7 +143,7 @@ public class ViewCalculadoraSubtracao extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnFechar;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnMultiplicacao;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

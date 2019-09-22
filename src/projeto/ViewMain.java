@@ -29,9 +29,18 @@ public class ViewMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        botaoCalculaSoma2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         botaoCalculaSoma = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        botaoCalculaSoma1 = new javax.swing.JButton();
+
+        botaoCalculaSoma2.setText("Calculadora de Multiplicação");
+        botaoCalculaSoma2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCalculaSoma2ActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,15 +58,24 @@ public class ViewMain extends javax.swing.JFrame {
             }
         });
 
+        botaoCalculaSoma1.setText("Calculadora de Multiplicação");
+        botaoCalculaSoma1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCalculaSoma1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(botaoCalculaSoma, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(botaoCalculaSoma1, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
+                    .addComponent(botaoCalculaSoma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -67,7 +85,9 @@ public class ViewMain extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
                     .addComponent(botaoCalculaSoma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(191, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(botaoCalculaSoma1, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -85,15 +105,27 @@ public class ViewMain extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoCalculaSomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCalculaSomaActionPerformed
-        ViewCalculadoraSoma form = new ViewCalculadoraSoma(this,true);
+        ViewSoma form = new ViewSoma(this,true);
         form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
         form.setLocationRelativeTo(null);
         form.setResizable(false);
         form.setVisible(true);
     }//GEN-LAST:event_botaoCalculaSomaActionPerformed
 
+    private void botaoCalculaSoma1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCalculaSoma1ActionPerformed
+        ViewMultiplicacao form = new ViewMultiplicacao(this,true);
+        form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        form.setLocationRelativeTo(null);
+        form.setResizable(false);
+        form.setVisible(true);
+    }//GEN-LAST:event_botaoCalculaSoma1ActionPerformed
+
+    private void botaoCalculaSoma2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCalculaSoma2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botaoCalculaSoma2ActionPerformed
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        ViewCalculadoraSubtracao form = new ViewCalculadoraSubtracao(this,true);
+        ViewSubtracao form = new ViewSubtracao(this,true);
         form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
         form.setLocationRelativeTo(null);
         form.setResizable(false);
@@ -137,6 +169,8 @@ public class ViewMain extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoCalculaSoma;
+    private javax.swing.JButton botaoCalculaSoma1;
+    private javax.swing.JButton botaoCalculaSoma2;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
